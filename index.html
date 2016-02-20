@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Random Quote Generator</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div class="picture">
+      <h1>Random Rumi Verse Generator</h1>
+      <div class="mainbox">
+        <p id="rumiQuote">This is where the quote will go.</p>
+        <button  onclick="newQuote()" id="rumiQuoteButton">Click for new Rumi Quote!</button>
+
+        </div>  
+
+
+    </div>
+    
+    
+
+
+ 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js">
+    
+    </script>
+    <script src="js/main.js"></script>-->
+     <script>
+    
+
+      
+    
+      var rumiQuotes = ['“Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it.”  ― Rumi', '"Out beyond ideas of wrongdoing and rightdoing there is a field.  I\'ll meet you there.  When the soul lies down in that grass the world is too full to talk about." - Rumi', '“The wound is the place where the Light enters you.”  ― Rumi', '“Stop acting so small. You are the universe in ecstatic motion.”  ― Rumi','“What you seek is seeking you.”  ― Rumi','“Do not be satisfied with stories, how things have gone with others. Unfold your own myth.”  ― Rumi', '“Set your self on fire. Seek those who fan your flames” ― Rumi', '“Forget safety. Live where you fear to live. Destroy your reputation. Be notorious.” ― Rumi'];
+
+      var randomKey = Math.floor(Math.random() * rumiQuotes.length);  
+
+      function newQuote(){
+        console.log(randomKey);
+        document.getElementById("rumiQuote").innerHTML = rumiQuotes[7];
+     }
+     </script>
+  </body>
+</html>
