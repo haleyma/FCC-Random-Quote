@@ -38,15 +38,23 @@ h1 {
 	
 }
 .text {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   color: black;
+  padding-top: 7px;
   
 }
 
 #rumiQuoteButton {
 	color: purple;
 	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color: #ffffff;
+	opacity: 0.4;
+	font-weight: bold;
+	
   
   
 }
