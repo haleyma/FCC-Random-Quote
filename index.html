@@ -30,10 +30,14 @@
         
 
         </div> 
-        <button  onclick="newQuote()" id="rumiQuoteButton">Click for new Rumi Quote!</button> 
+        <button onclick="newQuote()" id="rumiQuoteButton">Click for new Rumi Quote!</button> 
+
+        
 
 
-    </div>
+        <button id="twitterButton">Tweet</button>
+      
+          </div>
     
     
 
@@ -46,6 +50,7 @@
     
     </script>
     <script src="js/main.js"></script>-->
+    
      <script>
     
 
@@ -55,12 +60,47 @@
 
         
 
-      function newQuote(){
-        var randomKey =    Math.floor(Math.random() * rumiQuotes.length);
+       function newQuote() {
+        var randomKey =  Math.floor(Math.random() * rumiQuotes.length);
         /*console.log(randomKey);*/
-        document.getElementById("rumiQuote").innerHTML = rumiQuotes[randomKey];
-       
-     }
+        var newTweet = rumiQuotes[randomKey]
+        document.getElementById("rumiQuote").innerHTML = newTweet;
+        console.log(newTweet);
+        
+        
+     
+        var factText = document.getElementById("rumiQuote").innerHTML;
+        //var redirectUrl = <!---url you want to redirect from twitter -->;
+
+        // Convert to string
+        var factStr = factText.toString();
+
+        // Fact length
+        var factLen = factText.length;
+
+        // Formats "facts" that are too long... remove if not needed
+        if (factLen > 103) { // max chacters allowed
+            // trim, and allow space for '...'"
+            var trimFact = factStr.substring(0, 70);
+            var trimFact = trimFact.trim(); //<-- ensures the last character isnt ' '
+            factStr = trimFact + "...";
+            }
+
+        // Update the link
+
+        var linkRef = "https://twitter.com/intent/tweet?text= " + factStr;
+        console.log(linkRef);
+
+        document.getElementById("twitterButton").onclick = function(){window.open(linkRef, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0')
+
+        //jQuery('#factLink').attr('href', linkRef);
+     
+          }
+        }
+   
+
+     
      </script>
   </body>
 </html>
+

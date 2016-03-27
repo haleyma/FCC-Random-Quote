@@ -54,7 +54,22 @@ h1 {
 	background-color: #ffffff;
 	opacity: 0.4;
 	font-weight: bold;
-	
-  
-  
+   
+}
+
+#twitterButton {
+	background-image: url("https://dl.dropboxusercontent.com/s/lm7e0231t8s6589/TwitterIconGrey.png?dl=0");
+
+	height: 50px;
+	width: 50px;
+	display: block;
+	margin-left: 600px;
+	margin-top: 20px;
+	background-color: #ffffff;
+	opacity: 0.4;
+	border-radius: 5px;
+	color: purple;
+	font-weight: bold;
+	position: center;
+
 }
