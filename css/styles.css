@@ -4,7 +4,9 @@ body {
 	background-image: url("../images/hand3.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	backgroun-position: center;
+
+	
+	
 
 	
 	
@@ -71,4 +73,8 @@ h1 {
 	font-weight: bold;
 	text-align: center;
 
+}
+
+#bottom {
+	height: 100px;
 }
